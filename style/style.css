@@ -18,6 +18,9 @@
   height: 14px;
   width: 15px;
 }
+.icon img{
+  width: 100%;
+}
 .logo{
   padding: 50px;
 }
@@ -93,8 +96,90 @@ span{
     display: block;
   }
 }
+.plants{
+  text-align: center;
+}
+.container{
+  padding: 10px 10px;
+  margin: 10px 10px;
+  box-sizing: border-box;
+  gap: 20;
+}
+.plants{
+  padding: 60px;
+}
+.container{
+  padding: 70px;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  text-align: center;
+  
+}
+.flower{
+  border: none;
+  padding: 10px;
+  gap: 20;
+}
+.container img{
+  width: 100%;
+  gap: 20;
+
+}
+.container button{
+  width: 100%;
+  height: 40px;
+  background-color: rgb(233, 90, 8);
+  color: rgb(255, 255, 255);
+  border: none;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  align-items: center;
+  justify-content: center;
+  gap: 10;
 
 
+}
+.container p{
+  font-weight: 700;
+}
+@media  and(max-width:576px) {
+  .container{
+  grid-template-columns: repeat(1,1fr);
+  
+  }
+}
+.lover{
+  padding: 80px;
+   display: flex;
+ justify-content: space-between;
+ align-items: center;
+ gap: 20px;
+ 
+ }
+.img{
+  position: static;
+  display: flex;
+position: static;
+width: 540px;
+height: 597px;
+flex: none;
+order: 0;
+flex-grow: 0;
+  
+}
+.badge{
+position: absolute;
+width: 286px;
+height: 286px;
+left: 497px;
+top: 2072px;
+}
+.lover-text h2{
+display:flex ;
+color: rgb(0, 0, 0); 
+
+}
 
 
 

@@ -1,72 +1,94 @@
 *{
   padding: 0;
-  margin: 0;
+  margin:0;
   box-sizing: border-box;
 }
+body{
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
 .navbar{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  text-align: center;
-  background-color: white;
-  padding: 40PX;
-
-
-
-.icon{
-  display: flex;
-  height: 14px;
-  width: 15px;
-}
-.icon img{
   width: 100%;
-}
-.logo{
-  padding: 50px;
-}
-.menu {
-  text-decoration: none;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  text-align: center;
-  padding: 20px;
-  color: black;
-}
-.menu a{
+  align-items: center;
+  padding: 50px;
   text-decoration: none;
-  padding: 20px;
 }
+.menu-links{
+  padding: 20px;
+  gap: 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   
 }
-.desktop1{
-  font-weight: 700;
-  font-size: 16px;
-  color: black;
-  gap: 48;
-  color: black;
-
+.menu-links a{
+  text-decoration: none;
 }
-.desktop{
-  font-weight: 400;
+.home{
+  font-weight: 700;
+  color:  rgb(37, 36, 50);
   font-size: 16px;
-  color:rgb(137, 135, 161) ;
-  text-align: left;
-  flex-direction: row;
-  gap: 48;
+}
+.shop{
+  font-weight: 400;
+  color: rgb(137, 135, 161);;
+}
+.about{
+  color: rgb(137, 135, 161);
+  font-weight: 400;
+  letter-spacing: 0%;
+  
 }
 .cart{
+  color:  rgb(0, 0, 0);
+  font-weight: 400;
+  font-size: 16px;
+  text-decoration: none;
+
+}
+.cart a{
   display: flex;
-  text-align: center;
-  justify-content: center;
-  color: black;
+  align-items: center;
+  gap: 6px;
+
+}
+.icon{
+  width: 14px;
+  height: 15px;
+}
+@media screen and (max-width:768px) {
+  .home, .shop, .about {
+    display: none;
+  }
+  .cart{
+    display: block;
+    gap: 0;
+  }
+  .icon{
+    display: block;
+    justify-content: space-between;
+  }
+  .navbar {
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+  }
+  .cart a{
+    font-size: 16px;
+  }
+  .logo img{
+    width: 100%;
+  }
 }
 .banner{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding:60px 80px;
-  flex-wrap: wrap;
+  padding:50px;
+  gap:20px;
 }
 .banner-left h1{
   font-weight: 700;
@@ -77,26 +99,35 @@
 }
 .banner-left p{
   line-height: 1.8;
+  color: rgba(0, 0, 0, 0.5);;
 }
 span{
   color: rgb(233, 90, 8);
 }
-
+..banner-right {
+  max-width: 100%;
+  height: auto;
 }
-@media screen and(max-width:576px){
-
-  .desktop1{
-    display: none;
-
+@media screen and (max-width:768px) {
+  .banner{
+    flex-direction: column-reverse;
+    text-align: left;
   }
-  .desktop{
-    display: none;
+  p{
+    text-align: start;
   }
-  .cart{
-    display: block;
-  }
+  
 }
+
+
+  
+  
+  
 .plants{
+  justify-content: center;
+  text-align: center;
+}
+.plants p {
   text-align: center;
 }
 .container{
@@ -107,6 +138,13 @@ span{
 }
 .plants{
   padding: 60px;
+  color: rgba(0, 0, 0, 0.5);;
+}
+@media screen and (max-width:768) {
+  .plants{
+    display: block;
+  }
+  
 }
 .container{
   padding: 70px;
@@ -137,30 +175,34 @@ span{
   align-items: center;
   justify-content: center;
   gap: 10;
+  width: 100%;
+
 
 
 }
 .container p{
   font-weight: 700;
 }
-@media  and(max-width:576px) {
+@media screen and (max-width:768px) {
   .container{
-  grid-template-columns: repeat(1,1fr);
+  grid-template-columns: repeat(2,4fr);
   
+  }
+  .flower p{
+    text-align: center;
   }
 }
 .lover{
   padding: 80px;
    display: flex;
- justify-content: space-between;
- align-items: center;
+ justify-content: center;
+ align-items: flex-start;
  gap: 20px;
  
  }
 .img{
   position: static;
   display: flex;
-position: static;
 width: 540px;
 height: 597px;
 flex: none;
@@ -169,7 +211,7 @@ flex-grow: 0;
   
 }
 .badge{
-position: absolute;
+  
 width: 286px;
 height: 286px;
 left: 497px;
@@ -180,7 +222,138 @@ display:flex ;
 color: rgb(0, 0, 0); 
 
 }
+.lover-text ul{
+  color: rgba(0, 0, 0, 0.5);;
+}
+@media screen and (max-width:768) {
+  .lover {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 50px;
+  }
+  .lover-text{
+    
+  }
+  
+}
+.section{
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 20px;
+  padding: 30px;
+  flex-wrap: wrap;
+}
+.img-content{
+  position: relative;
+  max-width: 400px;
+  width: 100%;
+}
+.img-content img{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.img-content .badge{
+  position: absolute;
+  top: -50px;
+  left: 300px;
+  width: 150px;
+  height: auto;
 
+}
+@media screen and (max-width:768px) {
+  .section{
+    text-align: start;
+    align-items: flex-start;
+  
+  }
+  
+}
+.deals{
+align-items: center;
+text-align: center;
+}
+.deals p{
+  color:rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+.deal-container{
+  padding: 100px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+@media screen and (max-width:768) {
+  .deals{
+    text-align: center;
+    padding: 20px;
+  }
+  
+}
+.left-box{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+  min-width: 250px;
+}
+.small-card, .big-card{
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.small-card img, .big-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+
+}
+.text{
+  align-items: center;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  color: white;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px;
+}
+.text h3{
+  margin: 0;
+  font-size: 18px;
+}
+.text a{
+
+  color: white;
+  font-size: 18px;
+}
+.big-card{
+  flex: 2;
+  min-width: 300px;
+}
+@media screen and (max-width:768px) {
+  .deal-container {
+    flex-direction: column-reverse;
+  }
+  .big-card {
+    order: -1;
+  }
+
+  
+}
+
+
+
+
+
+
+  
 
 
 
